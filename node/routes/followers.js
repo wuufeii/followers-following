@@ -9,7 +9,8 @@ router.use(bodyParser.json())
 const getFollowing = (params,fn) => {
   request(`https://github.com/${params.name}?page=${params.page}&tab=${params.type}`,function(error,response,body){
     if (!error && response.statusCode === 200) {
-      let result = body.split('<a class="d-inline-block no-underline mb-1"');
+      // let result = body.split('<a class="d-inline-block no-underline mb-1"');
+       let result = body.split('<div class="d-table table-fixed col-12 width-full py-4 border-bottom border-gray-light"');
       let arr = []
       result.forEach((item,index) => {
         if(index!==0) {

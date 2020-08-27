@@ -5,7 +5,7 @@
       <div>1.<span>页数为整数，如你的followers为84,则输入的页数为2(算法为followers/50向上取整)</span></div>
 
       <div>2.<span class="both">❤</span>表示相互follow</div>
-      <div>3.<span>❤</span>表示相互follow</div>
+      <div>3.<span>❤</span>表示单向follow</div>
       <div>4.请准备一个好的网络....</div>
     </div>
     <div class="query">
@@ -32,8 +32,6 @@
 
 <script>
   import axios from 'axios'
-  import $ from 'jquery'
-
   export default {
     name: "followers",
     data() {
@@ -50,7 +48,7 @@
       }
     },
     mounted() {
-      this.getDiff()
+      //this.getDiff()
     },
     methods: {
       getFollowing(type) {
@@ -88,7 +86,6 @@
             }
             if(this.allPage === Number(this.followersPage)+Number(this.followingPage)) {
               this.getDiff()
-              console.log('js')
             }
           })
           followPage--
@@ -99,10 +96,10 @@
       },
       //比较两者区别
       getDiff() {
-        const following = JSON.parse(sessionStorage.getItem('following'))
-        const followers = JSON.parse(sessionStorage.getItem('followers'))
-        //const following = this.followingAll
-        //const followers = this.followersAll
+        //const following = JSON.parse(sessionStorage.getItem('following'))
+        //const followers = JSON.parse(sessionStorage.getItem('followers'))
+        const following = this.followingAll
+        const followers = this.followersAll
         let all = following.concat(followers)
         this.followersAndFollowing = this.uniqueArray(all,'key')
       },
@@ -149,6 +146,8 @@
 .item {
   display: flex;
   width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #eaecef;
   justify-content: space-between;
 }
 .left {
@@ -175,7 +174,12 @@
     font-size: 14px;
     color:#586069;
   }
+  .btn {
+    display: flex;
+    align-items: center;
+  }
   .btn button {
+    margin-left: 5px;
   }
   .btn .un {
     color: #999;
