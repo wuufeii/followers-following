@@ -3,10 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios'
-import apiConfig from '../config/api.config'
 Vue.config.productionTip = false
-//axios.defaults.baseURL = apiConfig.baseUrl
+import less from 'less'
+Vue.use(less)
 
 /* eslint-disable no-new */
 new Vue({

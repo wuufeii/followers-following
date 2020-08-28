@@ -6,8 +6,8 @@ Vue.use(Router)
 const routes = [
   {
     path: '/',
-    name: 'HelloWorld',
-    component: () => import('@/page/followers.vue')
+    name: 'Index',
+    component: () => import('@/page/index.vue')
   }
 ]
 
