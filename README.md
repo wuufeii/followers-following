@@ -12,6 +12,6 @@ followers与following比较(可看哪些是相互follower)
 ### 效果演示
 
 <div>
-  <img src="https://github.com/wuufeii/followers-following/blob/master/assets/demo.png"/>
+  <img src="https://github.com/wuufeii/followers-following/blob/master/assets/img/demo.png"/>
 </div>
 
