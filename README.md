@@ -14,5 +14,3 @@ followers与following比较(可看哪些是相互follower)
 <div>
   <img src="https://github.com/wuufeii/followers-following/blob/master/src/assets/img/demo.png"/>
 </div>
-
-
