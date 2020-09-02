@@ -54,6 +54,7 @@ export const dataMixins = {
       this.followingPage = Math.ceil(Number(this.userForm.following)/50)
       this.followersPage = Math.ceil(Number(this.userForm.followers)/50)
       this.showRight = true
+      this.allPage = 0
       this.getFollowing('following')
     },
     //自定义查询fallow
